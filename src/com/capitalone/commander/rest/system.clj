@@ -24,7 +24,6 @@
             [com.capitalone.commander.rest.component.routes :refer [construct-routes]]
             [com.capitalone.commander.rest.component.pedestal :refer [construct-pedestal-server]]
             [com.capitalone.commander.grpc :refer [construct-grpc-server]]
-            [com.capitalone.commander.database :refer [construct-jdbc-db]]
             [com.capitalone.commander.kafka :refer [construct-producer construct-consumer]]
             [com.capitalone.commander.api :refer [construct-commander-api]]))
 
@@ -43,7 +42,6 @@
          :grpc-server    (construct-grpc-server (:grpc config))
          :http           (construct-pedestal-server (:http config))
          :routes         (construct-routes)
-         :database       (construct-jdbc-db  (:database config))
          :kafka-consumer (construct-consumer (:kafka-consumer config))
          :kafka-producer (construct-producer (:kafka-producer config))
          :api            (construct-commander-api (:api config)))
@@ -52,4 +50,4 @@
           :routes         [:rest-endpoints]
           :rest-endpoints [:api]
           :grpc-server    [:api]
-          :api            [:kafka-producer :kafka-consumer :database]}))))
+          :api            [:kafka-producer :kafka-consumer]}))))

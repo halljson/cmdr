@@ -22,7 +22,7 @@
 (set! *warn-on-reflection* true)
 
 (def defaults
-  {:http           {:port          3000
+  {:http           {:port          3001
                     :resource-path "/public"}
    :grpc           {:port 8980}
    :api            {:commands-topic  "commands"
