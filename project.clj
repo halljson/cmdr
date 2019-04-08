@@ -23,9 +23,6 @@
   :scm         {:url "https://github.com/capitalone/cqrs-manager-for-distributed-reactive-services"}
   :license     {"License Name" "Apache License, Version 2.0"}
 
-  :repositories {"my.datomic.com" {:url "https://my.datomic.com/repo"
-                                   :creds :gpg}}
-
   :dependencies [ ;; Base
                  [org.clojure/clojure "1.9.0-alpha12"]
                  [org.clojure/core.async "0.2.385"]
@@ -53,7 +50,6 @@
                  [org.clojure/java.jdbc "0.6.2-alpha3"]
                  [org.postgresql/postgresql "9.4.1210"]
                  [ragtime/ragtime.jdbc "0.6.3"]
-                 [com.datomic/datomic-pro "0.9.5697"]
 
                  ;; Fressian
                  [org.fressian/fressian "0.6.6"]
